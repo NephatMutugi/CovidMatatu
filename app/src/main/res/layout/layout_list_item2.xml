@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="2dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="1dp"
+        app:cardMaxElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/powder_blue">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/prev_image"
+                android:src="@drawable/coughing"
+                />
+
+            <TextView
+                android:id="@+id/prev_name"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/wear_mask"
+                android:layout_below="@id/prev_image"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:fontFamily="serif"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

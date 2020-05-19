@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Covid Matatu</string>
+    <string name="covid_matatu">Covid Matatu</string>
+    <string name="covid_desc">Corona Virus Disease(COVID-19) is an infectious disease caused by a new virus</string>
+    <string name="app_desc_text">Help fight the invisible enemy by reporting COVID-19 related emergencies</string>
+    <string name="covid_19">Covid-19</string>
+    <string name="donate">Donate</string>
+    <string name="emergency">Emergency</string>
+    <string name="coughing">Coughing</string>
+    <string name="statistics">Statistics</string>
+    <string name="wear_mask">Wear a face mask in public</string>
+    <string name="signs">Signs of corona virus infection</string>
+    <string name="preventive_measures">Prevention Measures</string>
 </resources>

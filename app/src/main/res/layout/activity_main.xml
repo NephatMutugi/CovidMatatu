@@ -47,7 +47,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/donateButton"
+                    android:id="@+id/statisticsButton"
                     style="?android:buttonBarButtonStyle"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
@@ -84,7 +84,6 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:layout_marginTop="8dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +93,6 @@
             android:id="@+id/recycler_view2"
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:layout_marginTop="4dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="serif"
             android:text="@string/signs"
             android:textAllCaps="false"
@@ -119,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="serif"
             android:text="@string/preventive_measures"
             android:textAllCaps="false"

@@ -11,4 +11,5 @@
     <string name="wear_mask">Wear a face mask in public</string>
     <string name="signs">Signs of corona virus infection</string>
     <string name="preventive_measures">Prevention Measures</string>
+    <string name="cough_desc">COVID 19 causes a dry cough to most of the infected patients</string>
 </resources>

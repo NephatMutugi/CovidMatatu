@@ -24,13 +24,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     //Vars
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
+    private ArrayList<String> mSymptomDescription = new ArrayList<>();
     private Context mContext;
 
 
-    public RecyclerViewAdapter( Context context, ArrayList<String> names, ArrayList<String> imageUrls) {
+    public RecyclerViewAdapter( Context context, ArrayList<String> names, ArrayList<String> imageUrls,
+                                ArrayList<String> symptomDescription) {
         this.mNames = names;
         this.mImageUrls = imageUrls;
         this.mContext = context;
+        this.mSymptomDescription = symptomDescription;
     }
 
     @NonNull
@@ -51,6 +54,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 .load(mImageUrls.get(position))
                 .into(holder.mImage);
         holder.mName.setText(mNames.get(position));
+        holder.mSymptomDesc.setText(mSymptomDescription.get(position));
+
     }
 
     @Override
@@ -61,11 +66,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public class ViewHolder extends RecyclerView.ViewHolder{
         CircleImageView mImage;
         TextView mName;
+        TextView mSymptomDesc;
 
         public ViewHolder(View itemView){
             super(itemView);
             mImage = itemView.findViewById(R.id.image);
             mName = itemView.findViewById(R.id.name);
+            mSymptomDesc = itemView.findViewById(R.id.textDescription);
 
         }
 

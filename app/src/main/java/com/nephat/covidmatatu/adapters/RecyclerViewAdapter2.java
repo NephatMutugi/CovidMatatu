@@ -23,12 +23,15 @@ public class RecyclerViewAdapter2 extends RecyclerView.Adapter<RecyclerViewAdapt
 
     private ArrayList<String> myNames = new ArrayList<>();
     private ArrayList<String> myImageUrls = new ArrayList<>();
+    private ArrayList<String> myDescriptions = new ArrayList<>();
     private Context mContext;
 
-    public RecyclerViewAdapter2( Context mContext, ArrayList<String> myNames, ArrayList<String> myImageUrls) {
+    public RecyclerViewAdapter2( Context mContext, ArrayList<String> myNames,
+                                 ArrayList<String> myImageUrls, ArrayList<String> myDescriptions) {
         this.myNames = myNames;
         this.myImageUrls = myImageUrls;
         this.mContext = mContext;
+        this.myDescriptions = myDescriptions;
     }
 
     @NonNull
@@ -49,6 +52,7 @@ public class RecyclerViewAdapter2 extends RecyclerView.Adapter<RecyclerViewAdapt
                 .load(myImageUrls.get(position))
                 .into(holder.mImage);
         holder.mName.setText(myNames.get(position));
+        holder.mDescription.setText(myDescriptions.get(position));
     }
 
     @Override
@@ -56,15 +60,17 @@ public class RecyclerViewAdapter2 extends RecyclerView.Adapter<RecyclerViewAdapt
         return myImageUrls.size();
     }
 
-    public class ViewHolder2 extends RecyclerView.ViewHolder {
+    static class ViewHolder2 extends RecyclerView.ViewHolder {
 
         CircleImageView mImage;
         TextView mName;
+        TextView mDescription;
 
-        public ViewHolder2(@NonNull View itemView) {
+        ViewHolder2(@NonNull View itemView) {
             super(itemView);
             mImage = itemView.findViewById(R.id.prev_image);
             mName = itemView.findViewById(R.id.prev_name);
+            mDescription = itemView.findViewById(R.id.prev_description);
         }
     }
 }

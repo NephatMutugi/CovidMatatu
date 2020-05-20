@@ -7,9 +7,9 @@
     android:layout_margin="2dp">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="120dp"
+        android:layout_width="300dp"
         android:layout_height="120dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         app:cardCornerRadius="4dp"
         app:cardElevation="1dp"
@@ -17,34 +17,52 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/powder_blue">
+            android:background="@color/textViewColor">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:scaleType="centerCrop"
                 android:layout_marginTop="2dp"
-                android:layout_centerHorizontal="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
                 android:id="@+id/image"
                 android:src="@drawable/coughing"
                 />
             
             <TextView
                 android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
                 android:text="@string/coughing"
                 android:layout_below="@id/image"
                 android:gravity="center"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/white"
                 android:fontFamily="serif"/>
+
+            <TextView
+                android:id="@+id/textDescription"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cough_desc"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentEnd="true"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

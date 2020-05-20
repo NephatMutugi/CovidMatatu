@@ -12,4 +12,12 @@
     <string name="signs">Signs of corona virus infection</string>
     <string name="preventive_measures">Prevention Measures</string>
     <string name="cough_desc">COVID 19 causes a dry cough to most of the infected patients</string>
+    <string name="cases_label">Coronavirus cases in Kenya</string>
+    <string name="distribution_of_cases">Distribution of cases in different counties in the country</string>
+    <string name="affected_counties">Number of affected counties:</string>
+    <string name="no_of_affected_counties">22</string>
+    <string name="name_of_county">Name of county</string>
+    <string name="number_of_cases">No. of cases</string>
+    <string name="nairobi_county">Nairobi County</string>
+    <string name="cases">400</string>
 </resources>

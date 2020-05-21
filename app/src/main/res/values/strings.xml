@@ -20,4 +20,6 @@
     <string name="number_of_cases">No. of cases</string>
     <string name="nairobi_county">Nairobi County</string>
     <string name="cases">400</string>
+    <string name="emergency_title">Report an emergency or a COVID 19 related misconduct in a matatu</string>
+    <string name="type_of_emergency">Type of emergency\nor complaint:</string>
 </resources>

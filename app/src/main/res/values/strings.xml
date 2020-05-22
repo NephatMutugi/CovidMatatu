@@ -21,5 +21,19 @@
     <string name="nairobi_county">Nairobi County</string>
     <string name="cases">400</string>
     <string name="emergency_title">Report an emergency or a COVID 19 related misconduct in a matatu</string>
-    <string name="type_of_emergency">Type of emergency\nor complaint:</string>
+    <string name="type_of_emergency">Type of emergency or complaint:</string>
+    <string name="name_of_the_sacco">Name of the sacco:</string>
+    <string name="input_sacco_name">Input sacco name</string>
+    <string name="select_as_sacco">Select a sacco</string>
+    <string name="matatu_route">Matatu Route:</string>
+    <string name="enter_route">Enter route</string>
+    <string name="reg_hint">KCA 617B</string>
+    <string name="registration_number">Registration Number</string>
+    <string name="describe_your_emergency">Describe your emergency</string>
+
+    <string-array name="emergency_list">
+        <item>Not maintaining hygiene in matatu and wearing face masks</item>
+        <item>Carrying excess passengers</item>
+        <item>Exorbitant fares</item>
+    </string-array>
 </resources>

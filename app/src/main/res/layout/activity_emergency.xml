@@ -23,10 +23,129 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearEmergencyType"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/rounded_emergency_type"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearRegNumber">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="serif"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+            android:text="@string/type_of_emergency"
+            android:textColor="@color/red"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRouteName"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/rounded_emergency_type"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearSaccoName">
+
+        <TextView
+            android:id="@+id/textViewRoute"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:fontFamily="serif"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="4dp"
+            android:paddingBottom="8dp"
+            android:text="@string/matatu_route"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <AutoCompleteTextView
+            android:id="@+id/enterRouteName"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_edit_text"
+            android:completionHint="@string/select_as_sacco"
+            android:completionThreshold="1"
+            android:dropDownAnchor="@id/textViewRoute"
+            android:gravity="center"
+            android:hint="@string/enter_route"
+            android:paddingBottom="8dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRegNumber"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearRouteName"
+        android:background="@drawable/rounded_emergency_type">
+
+        <TextView
+            android:id="@+id/textRegNumber"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:fontFamily="serif"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="4dp"
+            android:paddingBottom="8dp"
+            android:text="@string/registration_number"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/enterCarRegNumber"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_edit_text"
+            android:gravity="center"
+            android:hint="@string/reg_hint"
+            android:paddingBottom="8dp"
+            android:singleLine="true"
+            android:autofillHints="KCA 617B"
+            android:inputType="textCapCharacters"
+            tools:ignore="TextFields" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearSaccoName"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,22 +154,65 @@
         android:background="@drawable/rounded_emergency_type">
 
         <TextView
-            android:id="@+id/textView12"
-            android:layout_width="250dp"
-            android:layout_height="match_parent"
+            android:id="@+id/textView15"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
             android:fontFamily="serif"
             android:gravity="center_vertical"
-            android:paddingStart="4dp"
-            android:paddingEnd="0dp"
-            android:text="@string/type_of_emergency"
+            android:paddingHorizontal="4dp"
+            android:text="@string/name_of_the_sacco"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
 
-        <Spinner
-            android:id="@+id/spinner"
+        <AutoCompleteTextView
+            android:id="@+id/enterSaccoName"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1"
-            android:gravity="center_vertical"/>
+            android:paddingBottom="8dp"
+            android:background="@drawable/rounded_edit_text"
+            android:completionHint="@string/select_as_sacco"
+            android:completionThreshold="1"
+            android:dropDownAnchor="@id/textView15"
+            android:gravity="center"
+            android:hint="@string/select_as_sacco"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_edit_text"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearEmergencyType">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:text="@string/describe_your_emergency" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
